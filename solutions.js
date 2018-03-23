@@ -6,7 +6,29 @@
 
 
 // Palindrome
-function isPalindrome(word) {
-	return word.toUpperCase() === word.split('').reverse().join('').toUpperCase();
+function checkPalindrome(strWord) {
+	return strWord.toUpperCase() === strWord.split('').reverse().join('').toUpperCase();
 }
-console.log('Is palindrome? ' + isPalindrome('test'));
+console.log(checkPalindrome('test'));
+
+
+// Digit summer
+function sumDigits(intNum) {
+
+	// convert to string and split array
+	let arrDigits = intNum.toString().split(''),
+			intSum = 0;
+
+	// loop through array
+	for (let i = 0; i < arrDigits.length; i++) {
+		// convert to number and add each digit to sum variable
+		intSum += Number(arrDigits[i]);
+	}
+
+	// check for a valid number if not cast it to a string and return error message
+	if (isNaN(intSum)) {
+		intSum = "Please enter a valid number.";
+	}
+	return intSum;
+}
+console.log(sumDigits(42));
