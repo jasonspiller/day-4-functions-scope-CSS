@@ -77,11 +77,30 @@ console.log(checkPrime(97));
 
 function printPrimes(intNum) {
 	// loop through all numbers up to the argument
-	for (let i = 2; i < intNum; i++) {
+	for (let i = 2; i <= intNum; i++) {
 		// call func to check if prime
 		if (checkPrime(i)) {
 			console.log(i);
 		}
 	}
 }
-printPrimes(100);
+printPrimes(5);
+
+
+// Insert Dash
+function insertDash(intNum) {
+
+	// split number into individual values
+	let arrDigits = intNum.toString().split('');
+
+	// loop over array and check for consecutive odd numbers
+	for (let i = 0; i < arrDigits.length - 1; i++) {
+		if (Number(arrDigits[i])%2 !== 0 && Number(arrDigits[i+1])%2 !== 0) {
+			arrDigits[i] += '-';
+		}
+	}
+
+	// convert array to string and return
+	return arrDigits.join('');
+}
+console.log(insertDash(44443444));
