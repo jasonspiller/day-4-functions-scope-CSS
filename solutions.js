@@ -32,3 +32,15 @@ function sumDigits(intNum) {
 	return intSum;
 }
 console.log(sumDigits(42));
+
+
+// Pythagoras
+function calculateSide(intSideA, intSideB) {
+	// check to make sure arguments are numbers
+	if (typeof intSideA === "number" && typeof intSideB === "number" ) {
+		return Math.sqrt(Math.pow(intSideA, 2) + Math.pow(intSideB, 2));
+	} else {
+		return "Please enter valid numerical values."
+	}
+}
+console.log(calculateSide(8,6));
