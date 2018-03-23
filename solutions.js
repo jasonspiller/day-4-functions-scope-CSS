@@ -46,14 +46,14 @@ function calculateSide(intSideA, intSideB) {
 console.log(calculateSide(8,6));
 
 
-// Digit summer
+// Array summer
 function sumArray(arrNumbers) {
 
 	let intSum = 0;
 
-	// loop through array
+	// loop through array and add each value
 	arrNumbers.forEach(function(num){
-  	intSum += num
+  	intSum += num;
 	});
 	// check for a valid number if not cast it to a string and return error message
 	if (isNaN(intSum)) {
@@ -62,3 +62,26 @@ function sumArray(arrNumbers) {
 	return intSum;
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+
+// Prime numbers
+function checkPrime(intNum) {
+	// loop through possible numbers until you get to the square root of the number
+  for(let i = 2; i <= Math.sqrt(intNum); i++)
+    if(intNum % i === 0) {
+			return false;
+	}
+  return true;
+}
+console.log(checkPrime(97));
+
+function printPrimes(intNum) {
+	// loop through all numbers up to the argument
+	for (let i = 2; i < intNum; i++) {
+		// call func to check if prime
+		if (checkPrime(i)) {
+			console.log(i);
+		}
+	}
+}
+printPrimes(100);
