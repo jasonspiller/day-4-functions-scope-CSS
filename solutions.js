@@ -87,7 +87,7 @@ function printPrimes(intNum) {
 printPrimes(5);
 
 
-// Insert Dash
+//  Insert Dash
 function insertDash(intNum) {
 
 	// split number into individual values
