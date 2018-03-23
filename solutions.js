@@ -44,3 +44,21 @@ function calculateSide(intSideA, intSideB) {
 	}
 }
 console.log(calculateSide(8,6));
+
+
+// Digit summer
+function sumArray(arrNumbers) {
+
+	let intSum = 0;
+
+	// loop through array
+	arrNumbers.forEach(function(num){
+  	intSum += num
+	});
+	// check for a valid number if not cast it to a string and return error message
+	if (isNaN(intSum)) {
+		intSum = "Please enter a valid numerical values.";
+	}
+	return intSum;
+}
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
